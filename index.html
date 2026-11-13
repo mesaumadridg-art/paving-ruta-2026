@@ -333,6 +333,93 @@ background:none;border:0;font-family:inherit;cursor:pointer;padding:0}
   .f-obra{opacity:.10}
 }
 
+
+/* ===== composiciones propias del rediseño ===== */
+.slide.impacto{background:#0B0B0D;color:var(--cal);justify-content:flex-end;padding-bottom:92px}
+.slide.impacto::before{content:'';position:absolute;inset:0;background-image:var(--img-portada);
+  background-size:cover;background-position:center 42%;opacity:.55}
+.slide.impacto::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(11,11,13,.45) 0%,rgba(11,11,13,.86) 52%,#0B0B0D 100%)}
+.impacto-q{font-family:'Barlow',sans-serif;font-size:43px;line-height:1.07;font-weight:700;
+  letter-spacing:-.022em;max-width:1010px;margin:0 0 24px}
+.impacto-q em{font-style:normal;color:var(--ambar)}
+.impacto-resp{display:flex;gap:28px;margin-bottom:32px;max-width:1010px;align-items:baseline}
+.impacto-resp .no{font-family:'Barlow',sans-serif;font-size:23px;font-weight:700;color:#F06A5A;white-space:nowrap}
+.impacto-resp .si{font-size:15.5px;color:#C6C7C3;line-height:1.45;max-width:540px}
+.impacto-4{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;
+  border-top:1px solid rgba(255,255,255,.15);padding-top:19px;max-width:1010px}
+.impacto-4 div{font-size:13.5px;color:#B4B5B1;line-height:1.35}
+.impacto-4 b{display:block;font-size:9.5px;letter-spacing:.17em;color:var(--ambar);
+  margin-bottom:5px;font-weight:600}
+
+.regla-mb{margin:4px 0 30px;position:relative}
+.rm-track{position:relative;height:46px;background:#EDEAE2;border-radius:3px;overflow:visible}
+.rm-fill{position:absolute;inset:0;border-radius:3px;
+  background:linear-gradient(90deg,var(--petroleo),#0B5C6E);display:flex;align-items:center;
+  justify-content:flex-end;padding-right:16px}
+.rm-fill span{color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:18px}
+.rm-corte{position:absolute;top:-9px;bottom:-9px;left:42.5%;border-right:3px dashed #C0392B}
+.rm-tag{position:absolute;right:0;top:-22px;transform:translateX(50%);white-space:nowrap;
+  background:#C0392B;color:#fff;font-size:10.5px;letter-spacing:.08em;padding:3px 9px;border-radius:2px}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
+.chip{display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:9px 0;border-bottom:1px solid #E2DED3;font-size:13.5px}
+.chip b{font-weight:600}
+.chip em{font-style:normal;color:var(--gris);font-size:12.5px;flex:1;text-align:right}
+
+.duelo{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin:2px 0 24px}
+.duelo .lado{text-align:center}
+.duelo .lbl{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gris);margin-bottom:8px}
+.duelo .cifra{display:block;font-family:'Barlow',sans-serif;font-size:74px;font-weight:800;
+  line-height:.92;letter-spacing:-.045em}
+.duelo .cifra.rojo{color:#C0392B}
+.duelo .cifra.verde{color:var(--petroleo)}
+.duelo .unidad{display:block;font-size:11.5px;color:var(--gris);margin-top:7px}
+.duelo .medio{text-align:center;padding:2px 26px;border-left:1px solid #DDD9CE;border-right:1px solid #DDD9CE}
+.duelo .medio span{display:block;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gris)}
+.duelo .medio b{display:block;font-family:'Barlow',sans-serif;font-size:29px;color:#9A6B12;margin-top:3px}
+.marcas{display:flex;gap:26px;flex-wrap:wrap}
+.marcas span{font-size:13.5px;color:var(--gris);display:flex;align-items:center;gap:7px}
+.marcas span::before{content:'✓';color:var(--verde);font-weight:700}
+
+.lista-ed{border-top:1px solid #E2DED3;margin-top:6px}
+.le{display:grid;grid-template-columns:52px 1fr;gap:20px;padding:14px 0;
+  border-bottom:1px solid #E2DED3;align-items:baseline}
+.le-n{font-family:'Barlow',sans-serif;font-size:12.5px;font-weight:700;color:#9A6B12;letter-spacing:.08em}
+.le h3{font-family:'Barlow',sans-serif;font-size:22px;font-weight:700;margin:0 0 2px;letter-spacing:-.012em}
+.le p{font-size:13.5px;color:var(--gris);margin:0;line-height:1.42;max-width:780px}
+
+.tl{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;
+  margin-top:38px;padding-top:6px}
+.tl::before{content:'';position:absolute;left:0;right:9%;top:6px;height:2px;background:#E2DED3}
+.slide.active .tl::before{animation:trazar 1.3s cubic-bezier(.4,0,.2,1) .25s both}
+@keyframes trazar{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1)}}
+.tl-i{position:relative;padding-top:20px}
+.tl-i::before{content:'';position:absolute;top:-1px;left:0;width:13px;height:13px;
+  border-radius:50%;background:var(--ambar);box-shadow:0 0 0 4px var(--cal)}
+.tl-n{display:block;font-size:9.5px;letter-spacing:.16em;color:var(--gris);margin-bottom:5px}
+.tl-i h3{font-family:'Barlow',sans-serif;font-size:16.5px;font-weight:700;margin:0 0 5px}
+.tl-i p{font-size:12.5px;color:var(--gris);line-height:1.4;margin:0}
+
+@media (max-width: 860px){
+  .impacto-q{font-size:clamp(23px,7vw,30px)}
+  .impacto-resp{flex-direction:column;gap:8px;margin-bottom:22px}
+  .impacto-4{grid-template-columns:1fr 1fr;gap:12px}
+  .rm-fill span{font-size:15px}
+  .chips{grid-template-columns:1fr}
+  .duelo{grid-template-columns:1fr;gap:12px}
+  .duelo .medio{border:0;border-top:1px solid #DDD9CE;border-bottom:1px solid #DDD9CE;padding:8px 0}
+  .duelo .cifra{font-size:clamp(48px,16vw,62px)}
+  .le{grid-template-columns:34px 1fr;gap:12px;padding:11px 0}
+  .le h3{font-size:18px}
+  .tl{grid-template-columns:1fr;gap:0;margin-top:22px;padding-top:0}
+  .tl::before{left:6px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .slide.active .tl::before{animation:trazar-v 1.3s ease .25s both}
+  @keyframes trazar-v{from{transform:scaleY(0);transform-origin:top}to{transform:scaleY(1)}}
+  .tl-i{padding:0 0 18px 26px}
+  .tl-i::before{top:3px;left:0}
+}
 </style>
 </head>
 <body>
@@ -396,29 +483,19 @@ background:none;border:0;font-family:inherit;cursor:pointer;padding:0}
     </div>
   </section>
 
-  <section class="slide" data-tema="claro" data-titulo="Razón 1 · No es un activo">
-    <div class="foto-fondo f-obra"></div>
+  <section class="slide impacto" data-tema="oscuro" data-titulo="Razón 1 · No es un activo">
     <div class="cont">
       <div class="eyebrow fx">Por qué salir de Wix · razón 1 de 5</div>
-      <h2 class="fx" style="--d:1">El sitio no es un activo:<br>es un alquiler</h2>
-      <div class="rule"></div>
-      <div class="g2" style="gap:44px">
-        <div>
-          <p class="sub fx" style="--d:2;margin-bottom:16px">En Wix no existen los archivos. El sitio vive dentro del editor: no hay carpeta, ni FTP, ni copia que se pueda llevar a otro lado.</p>
-          <ul class="clean">
-            <li class="fx" style="--d:3">No se puede <b>exportar</b> el sitio para moverlo de proveedor.</li>
-            <li class="fx" style="--d:4">No se puede <b>respaldar</b> en un disco propio ni en el NAS de la empresa.</li>
-            <li class="fx" style="--d:5">No se puede <b>auditar</b> el código que se entrega.</li>
-            <li class="fx" style="--d:6">Si mañana se cambia de rumbo, se vuelve a pagar el trabajo desde cero.</li>
-          </ul>
-        </div>
-        <div class="card fx" style="--d:4;background:var(--crema);border-color:#DAD5C6;align-self:start">
-          <div class="n" style="color:#9A6B12">La pregunta que decide</div>
-          <p style="font-size:18.5px;color:var(--asfalto);line-height:1.4;font-family:'Barlow';font-weight:500">
-            Si mañana el proveedor duplica el precio o cierra, ¿el sitio se puede llevar a otro lado?
-          </p>
-          <p style="margin-top:13px">En Wix la respuesta es <b style="color:var(--rojo)">no</b>. Con archivos propios, es <b style="color:var(--verde)">sí</b>: se copian a otro servidor y en una tarde está funcionando.</p>
-        </div>
+      <div class="impacto-q fx" style="--d:1">Si mañana el proveedor duplica el precio o cierra,<br><em>¿el sitio se puede llevar a otro lado?</em></div>
+      <div class="impacto-resp fx" style="--d:3">
+        <span class="no">En Wix, no.</span>
+        <span class="si">Con archivos propios, sí: se copian a otro servidor y en una tarde está funcionando.</span>
+      </div>
+      <div class="impacto-4">
+        <div class="fx" style="--d:4"><b>01</b>No se puede <strong>exportar</strong></div>
+        <div class="fx" style="--d:5"><b>02</b>No se puede <strong>respaldar</strong></div>
+        <div class="fx" style="--d:6"><b>03</b>No se puede <strong>auditar</strong></div>
+        <div class="fx" style="--d:7"><b>04</b>Se vuelve a <strong>pagar</strong> desde cero</div>
       </div>
     </div>
   </section>
@@ -428,28 +505,21 @@ background:none;border:0;font-family:inherit;cursor:pointer;padding:0}
     <div class="cont">
       <div class="eyebrow fx">Por qué salir de Wix · razón 2 de 5</div>
       <h2 class="fx" style="--d:1">El techo técnico está<br>por debajo de lo que se necesita</h2>
-      <p class="sub fx" style="--d:2">Wix ofrece una salida para código propio, «Wix Headless». Sus límites son públicos y están escritos en su propia documentación.</p>
-      <div class="fx" style="--d:3;margin-bottom:20px">
-        <div class="barrow" style="align-items:flex-end">
-          <span class="lbl">Lo que se necesita</span>
-          <div class="bar" style="height:26px"><i style="--w:100%"></i></div>
-          <span class="val">47 MB</span>
+      <p class="sub fx" style="--d:2;margin-bottom:22px">Wix Headless admite código propio con un techo de 20 MB. El sitio con portafolio pesa 47.</p>
+      <div class="regla-mb fx" style="--d:3">
+        <div class="rm-track">
+          <div class="rm-fill"><span>47 MB</span></div>
+          <div class="rm-corte"><span class="rm-tag">techo de Wix · 20 MB</span></div>
         </div>
-        <div class="barrow" style="align-items:flex-end">
-          <span class="lbl">El límite de Wix</span>
-          <div class="bar" style="height:26px"><i class="red" style="--w:42.5%"></i></div>
-          <span class="val" style="color:var(--rojo)">20 MB</span>
-        </div>
-        <p style="font-size:12.5px;color:var(--gris);margin-top:7px">El sitio nuevo con portafolio pesa más del doble de lo que el constructor acepta en total.</p>
       </div>
-      <table class="fx" style="--d:5">
-        <tr><th style="width:30%">Lo que se necesita</th><th>Wix</th><th class="r" style="width:22%">Resultado</th></tr>
-        <tr><td>Archivos propios del sitio</td><td>Solo en «Headless», con techo de 20 MB</td><td class="r"><span class="tag bad">No alcanza</span></td></tr>
-        <tr><td>Portafolio de 20 fichas en PDF</td><td>No admite biblioteca de documentos</td><td class="r"><span class="tag bad">No alcanza</span></td></tr>
-        <tr><td>Control de caché y compresión</td><td>No hay acceso a .htaccess ni a cabeceras</td><td class="r"><span class="tag bad">No existe</span></td></tr>
-        <tr><td>Redirecciones del sitio anterior</td><td>Solo desde el editor, una por una</td><td class="r"><span class="tag mid">Parcial</span></td></tr>
-        <tr><td>Dominio propio en el plan Light</td><td>Requiere otro plan premium</td><td class="r"><span class="tag bad">Costo extra</span></td></tr>
-      </table>
+      <div class="chips fx" style="--d:4">
+        <div class="chip"><b>Archivos propios</b><em>Solo en Headless, con techo de 20 MB</em></div>
+        <div class="chip"><b>Portafolio de 20 fichas</b><em>No admite biblioteca de documentos</em></div>
+        <div class="chip"><b>Caché y compresión</b><em>Sin acceso a .htaccess ni cabeceras</em></div>
+        <div class="chip"><b>Redirecciones</b><em>Una por una, desde el editor</em></div>
+        <div class="chip"><b>Dominio propio</b><em>Exige otro plan premium</em></div>
+        <div class="chip"><b>Correo con el dominio</b><em>No existe en ningún plan</em></div>
+      </div>
     </div>
   </section>
 
@@ -457,35 +527,19 @@ background:none;border:0;font-family:inherit;cursor:pointer;padding:0}
     <div class="foto-fondo f-fibra"></div>
     <div class="cont">
       <div class="eyebrow fx">Por qué salir de Wix · razón 3 de 5</div>
-      <h2 class="fx" style="--d:1">Se paga la cuarta parte<br>de lo que se recibe</h2>
-      <div class="rule"></div>
-      <div class="g2" style="gap:44px;align-items:start;margin-bottom:18px">
-        <div class="fx" style="--d:2">
-          <div class="barrow" style="align-items:flex-end">
-            <span class="lbl" style="font-size:12.5px">Wix hoy</span>
-            <div class="bar" style="height:30px"><i class="red" style="--w:100%"></i></div>
-            <span class="val" style="font-size:15px;width:88px">L 5,494</span>
-          </div>
-          <div class="barrow" style="align-items:flex-end">
-            <span class="lbl" style="font-size:12.5px">Con el cambio</span>
-            <div class="bar" style="height:30px"><i style="--w:34.3%"></i></div>
-            <span class="val" style="font-size:15px;width:88px;color:var(--petroleo)">L 1,882</span>
-          </div>
-          <p style="font-size:12.5px;color:var(--gris);margin-top:8px">Costo anual del servicio de publicación, sin contar el trabajo de esta propuesta.</p>
-        </div>
-        <ul class="clean fx" style="--d:3;font-size:14px;margin-top:4px">
-          <li>El sitio sigue igual: mismas páginas, mismas fotos.</li>
-          <li>Pero el plan nuevo <b>suma correo corporativo</b>, respaldo diario y archivos propios.</li>
-          <li>La diferencia anual son <b>L 3,612</b>.</li>
-        </ul>
+      <h2 class="fx" style="--d:1">Se paga casi el triple<br>por lo mismo</h2>
+      <div class="duelo fx" style="--d:2">
+        <div class="lado"><span class="lbl">Wix hoy</span><span class="cifra rojo">5,494</span><span class="unidad">lempiras al año</span></div>
+        <div class="medio"><span>ahorro al año</span><b>3,612</b></div>
+        <div class="lado"><span class="lbl">Con el cambio</span><span class="cifra verde">1,882</span><span class="unidad">lempiras al año</span></div>
       </div>
-      <table class="fx" style="--d:3;font-size:13.5px">
-        <tr><th style="width:40%">Concepto</th><th class="r">Wix hoy</th><th class="r">Hosting nuevo</th></tr>
-        <tr><td>Sitio web publicado</td><td class="r">Sí</td><td class="r">Sí</td></tr>
-        <tr><td>Correo con el dominio</td><td class="r"><span class="tag bad">No</span></td><td class="r"><span class="tag ok">Sí</span></td></tr>
-        <tr><td>Respaldo diario del sitio</td><td class="r"><span class="tag bad">No</span></td><td class="r"><span class="tag ok">7 días</span></td></tr>
-        <tr><td>Acceso a los archivos</td><td class="r"><span class="tag bad">No</span></td><td class="r"><span class="tag ok">Sí</span></td></tr>
-      </table>
+      <p class="sub fx" style="--d:3;margin-bottom:16px">Mismo sitio y mismas páginas. El plan nuevo suma lo que hoy no existe.</p>
+      <div class="marcas fx" style="--d:4">
+        <span>Correo con el dominio</span>
+        <span>Respaldo diario de 7 días</span>
+        <span>Acceso a los archivos</span>
+        <span>Certificado incluido</span>
+      </div>
     </div>
   </section>
 
@@ -627,16 +681,13 @@ background:none;border:0;font-family:inherit;cursor:pointer;padding:0}
     <div class="cont">
       <div class="eyebrow fx">Lo que no se va a decir de otro modo</div>
       <h2 class="fx" style="--d:1">Lo que este proveedor<br>no es</h2>
-      <p class="sub fx" style="--d:2">Un proveedor sin defectos no existe. Estos son los del elegido, dichos antes de que alguien los encuentre.</p>
-      <div class="g2" style="gap:17px">
-        <div class="card fx" style="--d:3"><h3>No es dueño de su datacenter</h3><p>Revende infraestructura de un tercero. Eso no lo descalifica: el anterior también lo hacía. Pero una falla de su proveedor también es suya.</p></div>
-        <div class="card fx" style="--d:4"><h3>Su garantía se paga en crédito</h3><p>Ofrece 99.9 % de disponibilidad, pero compensa con descuento en la próxima factura, no en dinero, y excluye fallas de sus proveedores.</p></div>
-        <div class="card fx" style="--d:5"><h3>No emite factura local</h3><p>Cobra en dólares. El gasto no se puede deducir como local; se asumió a cambio del ahorro y de la capacidad técnica.</p></div>
-        <div class="card fx" style="--d:6"><h3>No tiene oficina en el país</h3><p>El soporte es remoto, en español, todos los días. No hay a quién visitar si algo falla.</p></div>
+      <p class="sub fx" style="--d:2;margin-bottom:14px">Dicho por nosotros antes de que alguien lo encuentre.</p>
+      <div class="lista-ed">
+        <div class="le fx" style="--d:3"><span class="le-n">01</span><div><h3>No es dueño de su datacenter</h3><p>Revende infraestructura de un tercero: una falla de su proveedor también es suya.</p></div></div>
+        <div class="le fx" style="--d:4"><span class="le-n">02</span><div><h3>Su garantía se paga en crédito</h3><p>99.9 % de disponibilidad, compensado en la próxima factura y sin cubrir fallas de sus proveedores.</p></div></div>
+        <div class="le fx" style="--d:5"><span class="le-n">03</span><div><h3>No emite factura local</h3><p>Cobra en dólares: el gasto no se deduce como local. Se asumió a cambio del ahorro.</p></div></div>
+        <div class="le fx" style="--d:6"><span class="le-n">04</span><div><h3>No tiene oficina en el país</h3><p>El soporte es remoto, en español, todos los días. No hay a quién visitar.</p></div></div>
       </div>
-      <p class="fx" style="--d:7;margin-top:16px;font-size:14px;color:var(--gris);line-height:1.5;border-left:3px solid var(--ambar);padding-left:15px;max-width:900px">
-        Ninguna de las opciones evaluadas resuelve las cuatro cosas a la vez. La que se propone las resuelve <b>mejor y más barato</b>, con salida garantizada.
-      </p>
     </div>
   </section>
 
@@ -664,21 +715,13 @@ background:none;border:0;font-family:inherit;cursor:pointer;padding:0}
     <div class="cont">
       <div class="eyebrow fx">El plan</div>
       <h2 class="fx" style="--d:1">Cómo se va a trabajar</h2>
-      <p class="sub fx" style="--d:2">Cinco etapas, cada una con un entregable concreto y una aprobación antes de pasar a la siguiente. Nadie avanza sin que el anterior esté aceptado.</p>
-      <div class="g2" style="gap:16px">
-        <div class="card fx" style="--d:3"><div class="n">ETAPA 01</div><h3>Definición</h3><p>Alcance cerrado, mapa del sitio, arquitectura de las ocho páginas y criterios de aceptación. Entregable: documento de alcance aprobado.</p></div>
-        <div class="card fx" style="--d:4"><div class="n">ETAPA 02</div><h3>Diseño</h3><p>Dirección de arte, prototipo navegable y sistema visual. Entregable: prototipo revisado en teléfono y computadora, no en diapositivas.</p></div>
-        <div class="card fx" style="--d:5"><div class="n">ETAPA 03</div><h3>Construcción</h3><p>Sitio y portafolio, optimización de peso, accesibilidad y medición de velocidad. Entregable: sitio funcionando en un entorno de prueba.</p></div>
-        <div class="card fx" style="--d:6"><div class="n">ETAPA 04</div><h3>Migración y publicación</h3><p>Contratación del hosting, buzones, certificado, cambio de los dos registros del dominio y redirecciones. Entregable: dominio publicado.</p></div>
-      </div>
-      <div class="card fx" style="--d:7;margin-top:16px;background:var(--petroleo);border:none;color:#fff">
-        <div class="g2" style="gap:20px;align-items:center">
-          <div>
-            <div class="n" style="color:var(--ambar)">ETAPA 05 · ENTREGA</div>
-            <h3 style="color:#fff">Capacitación y garantía</h3>
-          </div>
-          <p style="color:#CFE0E5;margin:0">Se entrega el sitio con su documentación, se capacita al equipo para publicar cambios y se cubren treinta días de corrección de defectos.</p>
-        </div>
+      <p class="sub fx" style="--d:2;margin-bottom:6px">Cinco etapas. Ninguna avanza sin la aprobación de la anterior.</p>
+      <div class="tl">
+        <div class="tl-i fx" style="--d:3"><span class="tl-n">ETAPA 01</span><h3>Definición</h3><p>Alcance, mapa de las ocho páginas y criterios de aceptación.</p></div>
+        <div class="tl-i fx" style="--d:4"><span class="tl-n">ETAPA 02</span><h3>Diseño</h3><p>Dirección de arte y prototipo navegable, revisado en teléfono.</p></div>
+        <div class="tl-i fx" style="--d:5"><span class="tl-n">ETAPA 03</span><h3>Construcción</h3><p>Sitio y portafolio, con peso y velocidad medidos.</p></div>
+        <div class="tl-i fx" style="--d:6"><span class="tl-n">ETAPA 04</span><h3>Migración</h3><p>Hosting, buzones, certificado y los dos registros del dominio.</p></div>
+        <div class="tl-i fx" style="--d:7"><span class="tl-n">ETAPA 05</span><h3>Entrega</h3><p>Documentación, capacitación y 30 días de garantía.</p></div>
       </div>
     </div>
   </section>
