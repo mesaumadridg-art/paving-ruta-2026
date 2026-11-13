@@ -186,6 +186,12 @@ background:none;border:0;font-family:inherit;cursor:pointer;padding:0}
   .tabla-opciones td:nth-child(5),.tabla-opciones th:nth-child(5){white-space:normal;font-size:11.6px;line-height:1.35}
   .tabla-opciones td:nth-child(2),.tabla-opciones th:nth-child(2){text-align:right;padding-right:10px}
   .tabla-opciones{display:table;width:100%}
+  .tabla-riesgos{display:table;width:100%;white-space:normal}
+  .tabla-riesgos th:nth-child(3),.tabla-riesgos td:nth-child(3){display:none}
+  .tabla-riesgos td{white-space:normal;font-size:11.8px;line-height:1.35;vertical-align:top}
+  .tabla-riesgos th:nth-child(1){width:44%}
+  .tabla-riesgos th:nth-child(2){width:56%}
+  .tabla-riesgos td:nth-child(1),.tabla-riesgos th:nth-child(1){padding-right:10px}
   ul.clean li{font-size:13.6px;margin-bottom:8px;padding-left:19px}
   .portada{justify-content:flex-end;padding-bottom:112px}
   .portada::before{background-image:var(--img-portada);background-position:center top;background-size:cover}
@@ -614,7 +620,7 @@ background:none;border:0;font-family:inherit;cursor:pointer;padding:0}
     <div class="cont">
       <div class="eyebrow fx">Gestión del riesgo</div>
       <h2 class="fx" style="--d:1">Cada riesgo tiene<br>su salida escrita</h2>
-      <table style="font-size:14px;margin-top:6px">
+      <table class="tabla-riesgos" style="font-size:14px;margin-top:6px">
         <tr><th style="width:33%">Si pasa esto…</th><th style="width:35%">…se hace esto</th><th>Cuánto cuesta</th></tr>
         <tr class="fx" style="--d:2"><td>El proveedor sube el precio al renovar</td><td>Se compara y se cambia de hosting: los archivos son propios</td><td>Una tarde de trabajo</td></tr>
         <tr class="fx" style="--d:3"><td>El proveedor cierra o desaparece</td><td>El dominio está fuera de él; se repunta a otro servidor</td><td>Minutos de propagación</td></tr>
